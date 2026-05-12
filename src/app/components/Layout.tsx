@@ -19,14 +19,17 @@ export default function Layout() {
   const [showNotifications, setShowNotifications] = useState(false);
   const notificationCount = 5;
 
-  const menuItems = [
-    { path: "/", icon: LayoutDashboard, label: "Dashboard Tổng Quan", exact: true },
-    { path: "/tasks", icon: CheckSquare, label: "Danh Sách Công Việc" },
+  const workManagementItems = [
+    { path: "/", icon: LayoutDashboard, label: "Dashboard tổng quan", exact: true },
+    { path: "/tasks", icon: CheckSquare, label: "Danh sách công việc" },
     { path: "/calendar", icon: CalendarIcon, label: "Lịch" },
-    { path: "/members", icon: Users, label: "Quản Lý Thành Viên" },
-    { path: "/departments", icon: Building2, label: "Quản Lý Phòng Ban" },
-    { path: "/settings", icon: SettingsIcon, label: "Cài Đặt" },
-    { path: "/help", icon: HelpCircle, label: "Trợ Giúp" },
+    { path: "/members", icon: Users, label: "Quản lý thành viên" },
+    { path: "/departments", icon: Building2, label: "Quản lý phòng ban" },
+  ];
+
+  const otherItems = [
+    { path: "/settings", icon: SettingsIcon, label: "Cài đặt" },
+    { path: "/help", icon: HelpCircle, label: "Trợ giúp" },
   ];
 
   return (
@@ -36,7 +39,7 @@ export default function Layout() {
         <div className="flex items-center justify-between px-6 py-4">
           {/* Left: System Title */}
           <div className="flex-1">
-            <h1 className="text-xl font-bold">HỆ THỐNG QUẢN LÝ CÔNG VIỆC</h1>
+            <h1 className="text-xl font-bold">Hệ thống quản lý công việc</h1>
             <p className="text-xs text-blue-100 mt-0.5">Theo dõi tiến độ - Realtime</p>
           </div>
 
@@ -150,24 +153,55 @@ export default function Layout() {
         {/* Sidebar */}
         <aside className="w-56 bg-white border-r border-gray-200 flex flex-col">
         <nav className="flex-1 p-3 overflow-y-auto pt-4">
-          <div className="space-y-1">
-            {menuItems.map((item) => (
-              <NavLink
-                key={item.path}
-                to={item.path}
-                end={item.exact}
-                className={({ isActive }) =>
-                  `flex items-center gap-2 px-3 py-2.5 rounded-lg transition-colors text-sm ${
-                    isActive
-                      ? "bg-blue-50 text-blue-700 font-medium"
-                      : "text-gray-700 hover:bg-gray-50"
-                  }`
-                }
-              >
-                <item.icon className="w-4 h-4" />
-                <span>{item.label}</span>
-              </NavLink>
-            ))}
+          {/* Quản lý công việc */}
+          <div className="mb-6">
+            <h3 className="px-3 mb-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+              Quản lý công việc
+            </h3>
+            <div className="space-y-1">
+              {workManagementItems.map((item) => (
+                <NavLink
+                  key={item.path}
+                  to={item.path}
+                  end={item.exact}
+                  className={({ isActive }) =>
+                    `flex items-center gap-2 px-3 py-2.5 rounded-lg transition-colors text-sm ${
+                      isActive
+                        ? "bg-blue-50 text-blue-700 font-medium"
+                        : "text-gray-700 hover:bg-gray-50"
+                    }`
+                  }
+                >
+                  <item.icon className="w-4 h-4" />
+                  <span>{item.label}</span>
+                </NavLink>
+              ))}
+            </div>
+          </div>
+
+          {/* Khác */}
+          <div>
+            <h3 className="px-3 mb-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+              Khác
+            </h3>
+            <div className="space-y-1">
+              {otherItems.map((item) => (
+                <NavLink
+                  key={item.path}
+                  to={item.path}
+                  className={({ isActive }) =>
+                    `flex items-center gap-2 px-3 py-2.5 rounded-lg transition-colors text-sm ${
+                      isActive
+                        ? "bg-blue-50 text-blue-700 font-medium"
+                        : "text-gray-700 hover:bg-gray-50"
+                    }`
+                  }
+                >
+                  <item.icon className="w-4 h-4" />
+                  <span>{item.label}</span>
+                </NavLink>
+              ))}
+            </div>
           </div>
         </nav>
         </aside>

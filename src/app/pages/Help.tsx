@@ -77,7 +77,7 @@ export default function Help() {
   return (
     <div className="p-8">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900">Trợ Giúp</h1>
+        <h1 className="text-3xl font-bold text-gray-900">Trợ giúp</h1>
         <p className="text-gray-500 mt-2">Tìm câu trả lời cho câu hỏi của bạn</p>
       </div>
 
