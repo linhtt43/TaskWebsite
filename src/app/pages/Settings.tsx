@@ -4,7 +4,7 @@ export default function Settings() {
   return (
     <div className="p-8">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900">Cài Đặt</h1>
+        <h1 className="text-3xl font-bold text-gray-900">Cài đặt</h1>
         <p className="text-gray-500 mt-2">Quản lý cài đặt hệ thống và tài khoản</p>
       </div>
 
