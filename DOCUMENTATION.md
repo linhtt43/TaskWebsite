@@ -25,10 +25,10 @@ Hệ thống quản lý công việc toàn diện, giúp tổ chức theo dõi, 
       - Danh sách 5 thông báo gần nhất
       - Nút "Xem tất cả thông báo"
     - 👤 **Avatar & Profile Menu:**
-      - Avatar tròn bg-blue-100 với chữ viết tắt xanh đậm
+      - Avatar tròn bg-blue-100 với chữ viết tắt xanh đậm (text-blue-900)
       - Tên: Nguyễn Văn A (text-blue-900)
       - Email: admin@company.com (text-gray-500)
-      - Icon ChevronDown xanh đậm (text-blue-900)
+      - Icon ChevronDown (text-blue-900)
       - Hover: bg-gray-100
       - Dropdown menu:
         - "Thông tin cá nhân"
@@ -146,7 +146,7 @@ Hệ thống quản lý công việc toàn diện, giúp tổ chức theo dõi, 
    - Icon Calendar
    - Input "Từ ngày" (date picker)
    - Input "Đến ngày" (date picker)
-   - Nút "Xóa bộ lọc" (hiện khi có filter)
+   - Nút "Xóa bộ lọc" (bg-gray-100, border-gray-300, rounded-lg, hiện khi có filter)
 
 **Hiển thị:**
 - **Default:** 5 dòng/trang (itemsPerPage = 5)
@@ -159,9 +159,10 @@ Hệ thống quản lý công việc toàn diện, giúp tổ chức theo dõi, 
 **Bảng dữ liệu:**
 - Tên công việc
 - Người thực hiện
-- Độ ưu tiên (badge màu)
-- Trạng thái (badge màu)
+- Độ ưu tiên (badge màu, rounded-lg)
+- Trạng thái (badge màu, rounded-lg)
 - Ngày cuối (YYYY-MM-DD)
+- Thao tác: Button "Xem chi tiết" (bg-gray-100, text-gray-700, border-gray-300, rounded-lg)
 
 **Empty state:**
 - "Không có công việc sắp quá hạn trong khoảng thời gian này"
@@ -213,8 +214,8 @@ Hệ thống quản lý công việc toàn diện, giúp tổ chức theo dõi, 
 
 **Các cột:**
 - Tên công việc
-- Độ ưu tiên (badge)
-- Trạng thái (badge)
+- Độ ưu tiên (badge, rounded-lg)
+- Trạng thái (badge, rounded-lg)
 - Người thực hiện
 - Ngày cuối
 - Thao tác (Eye / Edit / Trash icons)
@@ -314,16 +315,21 @@ Hệ thống quản lý công việc toàn diện, giúp tổ chức theo dõi, 
 
 | Cột | Mô tả |
 |-----|-------|
-| Thành viên | Avatar + Tên (màu ngẫu nhiên) |
+| Thành viên | Avatar + Tên (màu rõ nét, bg-xxx-500 text-white) |
 | Email | Địa chỉ email |
 | Điện thoại | Số điện thoại |
 | Phòng ban | Tên phòng ban |
 | Chức vụ | Vai trò/position |
-| Tình trạng | Badge: Hoạt động (green) / Không hoạt động (gray) |
+| Tình trạng | Badge: Hoạt động (green, rounded-lg) / Không hoạt động (gray, rounded-lg) |
 | Thao tác | Edit (green) / Delete (red) icons |
 
 **Avatar colors (xoay vòng):**
-- blue-500, green-500, yellow-500, purple-500, pink-500, indigo-500
+- bg-blue-500 text-white
+- bg-green-500 text-white
+- bg-orange-500 text-white
+- bg-purple-500 text-white
+- bg-pink-500 text-white
+- bg-indigo-500 text-white
 
 ---
 
@@ -546,6 +552,7 @@ Actions:
 - **Text:** blue-900 (xanh đậm)
 - **Sub-text:** gray-500
 - **Icons:** blue-900 (xanh đậm)
+- **Avatar bg:** blue-100
 - **Hover:** gray-100
 - **Border:** gray-200
 
@@ -553,14 +560,19 @@ Actions:
 
 ## Kích Thước & Spacing
 
+### Font:
+- **Font family:** Be Vietnam Pro (Google Fonts)
+- **Weights:** 300, 400, 500, 600, 700, 800
+- **Applied to:** Toàn bộ trang web
+
 ### Header:
-- Background: bg-white (đổi từ gradient blue)
+- Background: bg-white
 - Border: border-b border-gray-200
 - Padding: px-6 py-4 (giảm từ px-8 py-6)
 - Title: text-xl, text-blue-900 (xanh đậm, giảm từ text-2xl)
 - Sub-text: text-xs, text-gray-500 (giảm từ text-sm)
 - Icons: w-6 h-6, text-blue-900 (xanh đậm)
-- Avatar: bg-blue-100, text-blue-900 (xanh đậm)
+- Avatar: bg-blue-100, text-blue-900
 - Hover: bg-gray-100
 
 ### Sidebar:
@@ -581,6 +593,13 @@ Actions:
 - Padding: px-4 py-2
 - Text: base size
 - Icons: w-5 h-5
+- Border radius: rounded-lg
+
+### Badges/Tags:
+- Padding: px-2 py-1
+- Text: text-xs
+- Border radius: rounded-lg (đồng bộ với buttons và cards)
+- Font: font-semibold
 
 ### Form inputs:
 - Padding: px-3 py-1.5 (date inputs)
@@ -598,6 +617,7 @@ Actions:
 - **Routing:** React Router 7.13.0
 - **Styling:** Tailwind CSS 4.1.12
 - **Icons:** Lucide React 0.487.0
+- **Font:** Be Vietnam Pro (Google Fonts)
 - **Build Tool:** Vite 6.3.5
 - **UI Components:** Material UI 7.3.5
 - **Date Handling:** date-fns 3.6.0
@@ -866,6 +886,22 @@ pnpm preview
 
 ## Changelog
 
+### Version 1.0.6 (12/05/2026)
+- 🎨 Avatar thành viên đổi sang màu rõ nét (bg-xxx-500 text-white)
+- ✨ Tăng độ tương phản cho avatar với màu đậm và chữ trắng
+
+### Version 1.0.5 (12/05/2026)
+- 🔤 Đổi font toàn trang thành Be Vietnam Pro
+- 🎨 Button "Xem chi tiết" đổi sang màu xám (bg-gray-100, text-gray-700, border-gray-300)
+- ✂️ Bỏ icon Eye trong button "Xem chi tiết"
+
+### Version 1.0.4 (12/05/2026)
+- ✨ Thêm button "Xem chi tiết" vào bảng Công việc sắp quá hạn
+- 🎨 Button "Xóa bộ lọc" thêm nền xám và viền (bg-gray-100, border-gray-300)
+- 🎨 Avatar thành viên đổi sang màu pastel (bg-blue-100, bg-green-100, etc.)
+- 📐 Đồng bộ bo tròn: badges từ rounded-full → rounded-lg
+- 🎯 Tất cả badges, buttons, cards đều dùng rounded-lg
+
 ### Version 1.0.3 (12/05/2026)
 - 🎨 Đổi toàn bộ màu xanh sang xanh đậm (blue-900) theo thiết kế chính phủ
 - 📝 Header title, icons, profile name: text-blue-900
@@ -899,7 +935,7 @@ pnpm preview
 
 ---
 
-**Phiên bản:** 1.0.3  
+**Phiên bản:** 1.0.6  
 **Ngày cập nhật:** 12/05/2026  
 **Tác giả:** Development Team  
 **License:** Proprietary

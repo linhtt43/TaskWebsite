@@ -66,13 +66,13 @@ export default function Members() {
   const getStatusBadge = (status: string) => {
     if (status === "active") {
       return (
-        <span className="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+        <span className="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-lg bg-green-100 text-green-800">
           Hoạt động
         </span>
       );
     }
     return (
-      <span className="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-gray-100 text-gray-800">
+      <span className="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-lg bg-gray-100 text-gray-800">
         Không hoạt động
       </span>
     );
@@ -80,12 +80,12 @@ export default function Members() {
 
   const getAvatarColor = (index: number) => {
     const colors = [
-      "bg-blue-500",
-      "bg-green-500",
-      "bg-yellow-500",
-      "bg-purple-500",
-      "bg-pink-500",
-      "bg-indigo-500"
+      "bg-blue-500 text-white",
+      "bg-green-500 text-white",
+      "bg-orange-500 text-white",
+      "bg-purple-500 text-white",
+      "bg-pink-500 text-white",
+      "bg-indigo-500 text-white"
     ];
     return colors[index % colors.length];
   };

@@ -211,12 +211,12 @@ export default function TaskList() {
                       <div className="text-sm font-medium text-gray-900">{task.name}</div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <span className={`px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${getPriorityColor(task.priority)}`}>
+                      <span className={`px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-lg ${getPriorityColor(task.priority)}`}>
                         {task.priority}
                       </span>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <span className={`px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${getStatusColor(task.status)}`}>
+                      <span className={`px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-lg ${getStatusColor(task.status)}`}>
                         {getStatusLabel(task.status)}
                       </span>
                     </td>
