@@ -1,11 +1,3 @@
+This Figma Make file includes components from [shadcn/ui](https://ui.shadcn.com/) used under [MIT license](https://github.com/shadcn-ui/ui/blob/main/LICENSE.md).
 
-  # Task Management Website
-
-  This is a code bundle for Task Management Website. The original project is available at https://www.figma.com/design/E33W2mypBZj16UrcBS7Nw9/Task-Management-Website.
-
-  ## Running the code
-
-  Run `npm i` to install the dependencies.
-
-  Run `npm run dev` to start the development server.
-  
+This Figma Make file includes photos from [Unsplash](https://unsplash.com) used under [license](https://unsplash.com/license).

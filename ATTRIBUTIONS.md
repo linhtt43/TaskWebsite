@@ -1,3 +1,27 @@
-This Figma Make file includes components from [shadcn/ui](https://ui.shadcn.com/) used under [MIT license](https://github.com/shadcn-ui/ui/blob/main/LICENSE.md).
+import { createBrowserRouter } from "react-router";
+import Layout from "./components/Layout";
+import Dashboard from "./pages/Dashboard";
+import TaskList from "./pages/TaskList";
+import Calendar from "./pages/Calendar";
+import Members from "./pages/Members";
+import Departments from "./pages/Departments";
+import Settings from "./pages/Settings";
+import Help from "./pages/Help";
+import NotFound from "./pages/NotFound";
 
-This Figma Make file includes photos from [Unsplash](https://unsplash.com) used under [license](https://unsplash.com/license).
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    Component: Layout,
+    children: [
+      { index: true, Component: Dashboard },
+      { path: "tasks", Component: TaskList },
+      { path: "calendar", Component: Calendar },
+      { path: "members", Component: Members },
+      { path: "departments", Component: Departments },
+      { path: "settings", Component: Settings },
+      { path: "help", Component: Help },
+      { path: "*", Component: NotFound },
+    ],
+  },
+]);
