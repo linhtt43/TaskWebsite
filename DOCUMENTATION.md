@@ -889,6 +889,7 @@ pnpm preview
 ### Version 1.0.6 (12/05/2026)
 - 🎨 Avatar thành viên đổi sang màu rõ nét (bg-xxx-500 text-white)
 - ✨ Tăng độ tương phản cho avatar với màu đậm và chữ trắng
+- 📝 Đổi title trang thành "Hệ thống quản lý công việc"
 
 ### Version 1.0.5 (12/05/2026)
 - 🔤 Đổi font toàn trang thành Be Vietnam Pro

@@ -1,6 +1,11 @@
 import { RouterProvider } from 'react-router';
+import { useEffect } from 'react';
 import { router } from './routes';
 
 export default function App() {
+  useEffect(() => {
+    document.title = 'Hệ thống quản lý công việc';
+  }, []);
+
   return <RouterProvider router={router} />;
 }
