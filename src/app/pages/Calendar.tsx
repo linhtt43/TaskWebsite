@@ -83,7 +83,7 @@ export default function Calendar() {
           <h1 className="text-3xl font-bold text-gray-900">Lịch</h1>
           <p className="text-gray-500 mt-2">Quản lý lịch meeting và công việc</p>
         </div>
-        <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 flex items-center gap-2">
+        <button className="bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-950 flex items-center gap-2">
           <Plus className="w-5 h-5" />
           Thêm Sự Kiện
         </button>
@@ -131,11 +131,11 @@ export default function Calendar() {
                   key={index}
                   className={`min-h-24 p-2 border rounded-lg ${
                     day ? "bg-white hover:bg-gray-50 cursor-pointer" : "bg-gray-50"
-                  } ${isToday(day) ? "border-blue-500 border-2" : "border-gray-200"}`}
+                  } ${isToday(day) ? "border-blue-900 border-2" : "border-gray-200"}`}
                 >
                   {day && (
                     <>
-                      <div className={`text-sm font-medium mb-1 ${isToday(day) ? "text-blue-600" : "text-gray-900"}`}>
+                      <div className={`text-sm font-medium mb-1 ${isToday(day) ? "text-blue-900" : "text-gray-900"}`}>
                         {day}
                       </div>
                       <div className="space-y-1">
@@ -167,7 +167,7 @@ export default function Calendar() {
             {events
               .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
               .map((event) => (
-                <div key={event.id} className="border-l-4 border-blue-500 pl-3 py-2">
+                <div key={event.id} className="border-l-4 border-blue-900 pl-3 py-2">
                   <h4 className="font-medium text-gray-900 text-sm">{event.title}</h4>
                   <p className="text-xs text-gray-500 mt-1">
                     {new Date(event.date).toLocaleDateString('vi-VN', {

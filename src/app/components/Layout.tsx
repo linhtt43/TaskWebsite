@@ -39,7 +39,7 @@ export default function Layout() {
         <div className="flex items-center justify-between px-6 py-4">
           {/* Left: System Title */}
           <div className="flex-1">
-            <h1 className="text-xl font-bold text-blue-700">Hệ thống quản lý công việc</h1>
+            <h1 className="text-xl font-bold text-blue-900">Hệ thống quản lý công việc</h1>
             <p className="text-xs text-gray-500 mt-0.5">Theo dõi tiến độ - Realtime</p>
           </div>
 
@@ -51,7 +51,7 @@ export default function Layout() {
                 onClick={() => setShowNotifications(!showNotifications)}
                 className="relative p-2 rounded-lg hover:bg-gray-100 transition-colors"
               >
-                <Bell className="w-6 h-6 text-blue-700" />
+                <Bell className="w-6 h-6 text-blue-900" />
                 {notificationCount > 0 && (
                   <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
                     {notificationCount}
@@ -86,7 +86,7 @@ export default function Layout() {
                       ))}
                     </div>
                     <div className="p-3 border-t border-gray-200 text-center">
-                      <button className="text-sm text-blue-600 hover:text-blue-700 font-medium">
+                      <button className="text-sm text-blue-900 hover:text-blue-700 font-medium">
                         Xem tất cả thông báo
                       </button>
                     </div>
@@ -102,13 +102,13 @@ export default function Layout() {
                 className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors"
               >
                 <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
-                  <span className="text-blue-700 font-medium">NV</span>
+                  <span className="text-blue-900 font-medium">NV</span>
                 </div>
                 <div className="text-left hidden xl:block">
-                  <p className="text-sm font-medium text-blue-700">Nguyễn Văn A</p>
+                  <p className="text-sm font-medium text-blue-900">Nguyễn Văn A</p>
                   <p className="text-xs text-gray-500">admin@company.com</p>
                 </div>
-                <ChevronDown className={`w-4 h-4 text-blue-700 transition-transform ${showProfileMenu ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-4 h-4 text-blue-900 transition-transform ${showProfileMenu ? 'rotate-180' : ''}`} />
               </button>
 
               {/* Dropdown Menu */}
@@ -167,7 +167,7 @@ export default function Layout() {
                   className={({ isActive }) =>
                     `flex items-center gap-2 px-3 py-2.5 rounded-lg transition-colors text-sm ${
                       isActive
-                        ? "bg-blue-50 text-blue-700 font-medium"
+                        ? "bg-blue-50 text-blue-900 font-medium"
                         : "text-gray-700 hover:bg-gray-50"
                     }`
                   }
@@ -192,7 +192,7 @@ export default function Layout() {
                   className={({ isActive }) =>
                     `flex items-center gap-2 px-3 py-2.5 rounded-lg transition-colors text-sm ${
                       isActive
-                        ? "bg-blue-50 text-blue-700 font-medium"
+                        ? "bg-blue-50 text-blue-900 font-medium"
                         : "text-gray-700 hover:bg-gray-50"
                     }`
                   }

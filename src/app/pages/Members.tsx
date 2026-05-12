@@ -97,7 +97,7 @@ export default function Members() {
           <h1 className="text-3xl font-bold text-gray-900">Quản lý thành viên</h1>
           <p className="text-gray-500 mt-2">Quản lý danh sách thành viên trong tổ chức</p>
         </div>
-        <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 flex items-center gap-2">
+        <button className="bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-950 flex items-center gap-2">
           <Plus className="w-5 h-5" />
           Thêm Thành Viên
         </button>
@@ -112,7 +112,7 @@ export default function Members() {
             placeholder="Tìm kiếm theo tên, email hoặc phòng ban..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900"
           />
         </div>
       </div>

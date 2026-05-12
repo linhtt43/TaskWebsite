@@ -5,6 +5,7 @@
 Hệ thống quản lý công việc toàn diện, giúp tổ chức theo dõi, phân công và quản lý công việc hiệu quả. Hệ thống được xây dựng với React, TypeScript, Tailwind CSS và React Router.
 
 ---
+
 ## Giao Diện Tổng Thể
 
 ### Header Top (Cố định)
@@ -13,21 +14,21 @@ Hệ thống quản lý công việc toàn diện, giúp tổ chức theo dõi, 
 - **Chiều cao:** py-4 (padding vertical)
 - **Nội dung:**
   - **Bên trái:** 
-    - Tiêu đề: "Hệ thống quản lý công việc" (text-xl, font-bold, text-blue-700)
+    - Tiêu đề: "Hệ thống quản lý công việc" (text-xl, font-bold, text-blue-900)
     - Sub-text: "Theo dõi tiến độ - Realtime" (text-xs, text-gray-500)
   - **Bên phải:**
     - 🔔 **Icon Chuông Thông Báo:** 
-      - Icon màu xanh (text-blue-700)
+      - Icon xanh đậm (text-blue-900)
       - Hover: bg-gray-100
       - Badge đỏ hiển thị số lượng (5)
       - Click hiển thị dropdown 320px
       - Danh sách 5 thông báo gần nhất
       - Nút "Xem tất cả thông báo"
     - 👤 **Avatar & Profile Menu:**
-      - Avatar tròn bg-blue-100 với chữ viết tắt màu xanh
-      - Tên: Nguyễn Văn A (text-blue-700)
+      - Avatar tròn bg-blue-100 với chữ viết tắt xanh đậm
+      - Tên: Nguyễn Văn A (text-blue-900)
       - Email: admin@company.com (text-gray-500)
-      - Icon ChevronDown màu xanh (text-blue-700)
+      - Icon ChevronDown xanh đậm (text-blue-900)
       - Hover: bg-gray-100
       - Dropdown menu:
         - "Thông tin cá nhân"
@@ -53,7 +54,7 @@ Hệ thống quản lý công việc toàn diện, giúp tổ chức theo dõi, 
 **Styling:**
 - Block header: text-xs, font-semibold, uppercase, text-gray-500
 - Menu items: text-sm, px-3, py-2.5
-- Active state: bg-blue-50, text-blue-700, font-medium
+- Active state: bg-blue-50, text-blue-900 (xanh đậm), font-medium
 - Hover: bg-gray-50
 - Icons: w-4, h-4
 
@@ -535,16 +536,16 @@ Actions:
 - **Indigo:** indigo-500/indigo-50/indigo-700
 
 ### Primary colors:
-- **Primary:** blue-600
-- **Hover:** blue-700
+- **Primary:** blue-900 (xanh đậm)
+- **Hover:** blue-950 (xanh đậm hơn)
 - **Light:** blue-50
 - **Border:** blue-200
 
 ### Header colors:
 - **Background:** white
-- **Text:** blue-700
+- **Text:** blue-900 (xanh đậm)
 - **Sub-text:** gray-500
-- **Icons:** blue-700
+- **Icons:** blue-900 (xanh đậm)
 - **Hover:** gray-100
 - **Border:** gray-200
 
@@ -556,10 +557,10 @@ Actions:
 - Background: bg-white (đổi từ gradient blue)
 - Border: border-b border-gray-200
 - Padding: px-6 py-4 (giảm từ px-8 py-6)
-- Title: text-xl, text-blue-700 (giảm từ text-2xl)
+- Title: text-xl, text-blue-900 (xanh đậm, giảm từ text-2xl)
 - Sub-text: text-xs, text-gray-500 (giảm từ text-sm)
-- Icons: w-6 h-6, text-blue-700
-- Avatar: bg-blue-100, text-blue-700
+- Icons: w-6 h-6, text-blue-900 (xanh đậm)
+- Avatar: bg-blue-100, text-blue-900 (xanh đậm)
 - Hover: bg-gray-100
 
 ### Sidebar:
@@ -586,7 +587,7 @@ Actions:
 - Padding: px-4 py-2 (text inputs, selects)
 - Border: border-gray-300
 - Rounded: rounded-lg
-- Focus: ring-2 ring-blue-500
+- Focus: ring-2 ring-blue-900 (xanh đậm)
 
 ---
 
@@ -865,8 +866,15 @@ pnpm preview
 
 ## Changelog
 
+### Version 1.0.3 (12/05/2026)
+- 🎨 Đổi toàn bộ màu xanh sang xanh đậm (blue-900) theo thiết kế chính phủ
+- 📝 Header title, icons, profile name: text-blue-900
+- 🎯 Sidebar active state: text-blue-900
+- 🔘 Buttons: bg-blue-900, hover:bg-blue-950
+- ✨ Cải thiện tính chuyên nghiệp với màu xanh navy đậm
+
 ### Version 1.0.2 (12/05/2026)
-- 🎨 Thay đổi màu header: nền trắng với chữ xanh (text-blue-700)
+- 🎨 Thay đổi màu header: nền trắng với chữ xanh
 - 🔔 Icons notification và profile chuyển sang màu xanh
 - ✨ Hover states chuyển từ bg-blue-600 sang bg-gray-100
 
@@ -891,7 +899,7 @@ pnpm preview
 
 ---
 
-**Phiên bản:** 1.0.2  
+**Phiên bản:** 1.0.3  
 **Ngày cập nhật:** 12/05/2026  
 **Tác giả:** Development Team  
 **License:** Proprietary

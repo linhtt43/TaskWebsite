@@ -52,7 +52,7 @@ export default function Help() {
       icon: BookOpen,
       title: "Tài liệu hướng dẫn",
       description: "Hướng dẫn chi tiết về các tính năng",
-      color: "bg-blue-50 text-blue-600"
+      color: "bg-blue-50 text-blue-900"
     },
     {
       icon: Video,
@@ -88,7 +88,7 @@ export default function Help() {
           <input
             type="text"
             placeholder="Tìm kiếm câu hỏi..."
-            className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900"
           />
         </div>
       </div>
@@ -143,7 +143,7 @@ export default function Help() {
       <div className="mt-8 bg-blue-50 rounded-lg border border-blue-200 p-6">
         <div className="flex items-start gap-4">
           <div className="bg-blue-100 p-3 rounded-lg">
-            <HelpCircle className="w-6 h-6 text-blue-600" />
+            <HelpCircle className="w-6 h-6 text-blue-900" />
           </div>
           <div className="flex-1">
             <h3 className="font-semibold text-gray-900 mb-2">Không tìm thấy câu trả lời?</h3>
@@ -151,7 +151,7 @@ export default function Help() {
               Liên hệ với đội ngũ hỗ trợ của chúng tôi để được giải đáp nhanh chóng.
             </p>
             <div className="flex gap-3">
-              <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+              <button className="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-950">
                 Gửi yêu cầu hỗ trợ
               </button>
               <button className="px-4 py-2 border border-blue-300 bg-white text-blue-700 rounded-lg hover:bg-blue-50">

@@ -210,7 +210,7 @@ export default function Dashboard() {
                     setSearchQuery(e.target.value);
                     setCurrentPage(1);
                   }}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-900"
                 />
               </div>
 
@@ -221,7 +221,7 @@ export default function Dashboard() {
                     setPriorityFilter(e.target.value);
                     setCurrentPage(1);
                   }}
-                  className="appearance-none px-4 py-2 pr-10 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+                  className="appearance-none px-4 py-2 pr-10 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-900 bg-white"
                 >
                   <option value="all">Tất cả độ ưu tiên</option>
                   <option value="Cao">Cao</option>
@@ -244,7 +244,7 @@ export default function Dashboard() {
                     setFromDate(e.target.value);
                     setCurrentPage(1);
                   }}
-                  className="px-3 py-1.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="px-3 py-1.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-900"
                 />
               </div>
               <div className="flex items-center gap-2">
@@ -256,7 +256,7 @@ export default function Dashboard() {
                     setToDate(e.target.value);
                     setCurrentPage(1);
                   }}
-                  className="px-3 py-1.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="px-3 py-1.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-900"
                 />
               </div>
               {(fromDate || toDate || searchQuery || priorityFilter !== "all") && (
@@ -268,7 +268,7 @@ export default function Dashboard() {
                     setPriorityFilter("all");
                     setCurrentPage(1);
                   }}
-                  className="text-sm text-blue-600 hover:text-blue-700"
+                  className="text-sm text-blue-900 hover:text-blue-700"
                 >
                   Xóa bộ lọc
                 </button>
@@ -353,7 +353,7 @@ export default function Dashboard() {
                   onClick={() => setCurrentPage(page)}
                   className={`px-4 py-2 rounded-lg border ${
                     currentPage === page
-                      ? 'bg-blue-600 text-white'
+                      ? 'bg-blue-900 text-white'
                       : 'bg-white text-gray-700 hover:bg-gray-50'
                   }`}
                 >

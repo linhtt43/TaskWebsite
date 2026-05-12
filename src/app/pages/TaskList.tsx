@@ -74,7 +74,7 @@ export default function TaskList() {
           <h1 className="text-3xl font-bold text-gray-900">Danh sách công việc</h1>
           <p className="text-gray-500 mt-2">Quản lý và theo dõi công việc</p>
         </div>
-        <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 flex items-center gap-2">
+        <button className="bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-950 flex items-center gap-2">
           <Plus className="w-5 h-5" />
           Thêm Công Việc
         </button>
@@ -92,7 +92,7 @@ export default function TaskList() {
                 placeholder="Tìm kiếm công việc..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900"
               />
             </div>
           </div>
@@ -105,7 +105,7 @@ export default function TaskList() {
                 setStatusFilter(e.target.value);
                 setCurrentPage(1);
               }}
-              className="appearance-none px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+              className="appearance-none px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 bg-white"
             >
               <option value="all">Tất cả trạng thái</option>
               <option value="completed">Đã hoàn thành</option>
@@ -124,7 +124,7 @@ export default function TaskList() {
                 setMemberFilter(e.target.value);
                 setCurrentPage(1);
               }}
-              className="appearance-none px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+              className="appearance-none px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 bg-white"
             >
               {members.map((member) => (
                 <option key={member} value={member === "Tất cả" ? "all" : member}>
@@ -143,7 +143,7 @@ export default function TaskList() {
                 setPriorityFilter(e.target.value);
                 setCurrentPage(1);
               }}
-              className="appearance-none px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+              className="appearance-none px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900 bg-white"
             >
               <option value="all">Tất cả độ ưu tiên</option>
               <option value="Cao">Cao</option>
@@ -228,7 +228,7 @@ export default function TaskList() {
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                       <div className="flex gap-2">
-                        <button className="text-blue-600 hover:text-blue-900">
+                        <button className="text-blue-900 hover:text-blue-900">
                           <Eye className="w-4 h-4" />
                         </button>
                         <button className="text-green-600 hover:text-green-900">
@@ -273,7 +273,7 @@ export default function TaskList() {
                       onClick={() => setCurrentPage(page)}
                       className={`px-4 py-2 rounded-lg border ${
                         currentPage === page
-                          ? 'bg-blue-600 text-white'
+                          ? 'bg-blue-900 text-white'
                           : 'bg-white text-gray-700 hover:bg-gray-50'
                       }`}
                     >

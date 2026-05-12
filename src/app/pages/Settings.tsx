@@ -66,7 +66,7 @@ export default function Settings() {
                 <input
                   type="text"
                   defaultValue="Nguyễn Văn A"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900"
                 />
               </div>
 
@@ -78,7 +78,7 @@ export default function Settings() {
                 <input
                   type="email"
                   defaultValue="admin@company.com"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900"
                 />
               </div>
 
@@ -90,7 +90,7 @@ export default function Settings() {
                 <input
                   type="tel"
                   defaultValue="0901234567"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900"
                 />
               </div>
 
@@ -99,7 +99,7 @@ export default function Settings() {
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Phòng ban
                 </label>
-                <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900">
                   <option>Phát triển</option>
                   <option>Thiết kế</option>
                   <option>Kiểm thử</option>
@@ -116,7 +116,7 @@ export default function Settings() {
                 <input
                   type="text"
                   defaultValue="Senior Developer"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-900"
                 />
               </div>
 
@@ -124,7 +124,7 @@ export default function Settings() {
               <div className="flex gap-3 pt-4">
                 <button
                   type="submit"
-                  className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                  className="px-6 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-950"
                 >
                   Lưu thay đổi
                 </button>
