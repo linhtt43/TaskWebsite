@@ -1,13 +1,11 @@
 import { useState } from "react";
-import { CheckCircle2, Clock, AlertCircle, ListTodo, ClipboardList, Users, TrendingUp, Calendar, Search, ChevronDown } from "lucide-react";
+import { CheckCircle2, Clock, AlertCircle, ListTodo, ClipboardList, Users, TrendingUp, Calendar } from "lucide-react";
 
 export default function Dashboard() {
   const [currentPage, setCurrentPage] = useState(1);
   const [fromDate, setFromDate] = useState("");
   const [toDate, setToDate] = useState("");
-  const [searchQuery, setSearchQuery] = useState("");
-  const [priorityFilter, setPriorityFilter] = useState("all");
-  const itemsPerPage = 5;
+  const itemsPerPage = 10;
 
   const stats = [
     {
@@ -105,18 +103,6 @@ export default function Dashboard() {
     return isUpcoming && notCompleted;
   });
 
-  // Lọc theo search query
-  if (searchQuery) {
-    filteredTasks = filteredTasks.filter(task =>
-      task.name.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-  }
-
-  // Lọc theo priority
-  if (priorityFilter !== "all") {
-    filteredTasks = filteredTasks.filter(task => task.priority === priorityFilter);
-  }
-
   // Lọc theo date range nếu có
   if (fromDate || toDate) {
     filteredTasks = filteredTasks.filter(task => {
@@ -161,7 +147,7 @@ export default function Dashboard() {
   return (
     <div className="p-8">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900">Dashboard tổng quan</h1>
+        <h1 className="text-3xl font-bold text-gray-900">Dashboard Tổng Quan</h1>
         <p className="text-gray-500 mt-2">Theo dõi tình hình công việc tổng thể</p>
       </div>
 
@@ -192,88 +178,49 @@ export default function Dashboard() {
       <div className="bg-white rounded-lg shadow-sm border border-gray-200">
         <div className="p-6 border-b border-gray-200">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-xl font-semibold text-gray-900">Công việc sắp quá hạn</h2>
+            <h2 className="text-xl font-semibold text-gray-900">Công Việc Sắp Quá Hạn</h2>
             <p className="text-sm text-gray-500">Deadline trong vòng 3 ngày tới</p>
           </div>
 
-          {/* Filters */}
-          <div className="space-y-4">
-            {/* Search and Priority */}
-            <div className="flex gap-4">
-              <div className="flex-1 relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                <input
-                  type="text"
-                  placeholder="Tìm kiếm công việc..."
-                  value={searchQuery}
-                  onChange={(e) => {
-                    setSearchQuery(e.target.value);
-                    setCurrentPage(1);
-                  }}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-
-              <div className="relative">
-                <select
-                  value={priorityFilter}
-                  onChange={(e) => {
-                    setPriorityFilter(e.target.value);
-                    setCurrentPage(1);
-                  }}
-                  className="appearance-none px-4 py-2 pr-10 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
-                >
-                  <option value="all">Tất cả độ ưu tiên</option>
-                  <option value="Cao">Cao</option>
-                  <option value="Trung bình">Trung bình</option>
-                  <option value="Thấp">Thấp</option>
-                </select>
-                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
-              </div>
+          {/* Date Range Filter */}
+          <div className="flex gap-4 items-center">
+            <div className="flex items-center gap-2">
+              <Calendar className="w-4 h-4 text-gray-500" />
+              <label className="text-sm text-gray-600">Từ ngày:</label>
+              <input
+                type="date"
+                value={fromDate}
+                onChange={(e) => {
+                  setFromDate(e.target.value);
+                  setCurrentPage(1);
+                }}
+                className="px-3 py-1.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
             </div>
-
-            {/* Date Range Filter */}
-            <div className="flex gap-4 items-center">
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4 text-gray-500" />
-                <label className="text-sm text-gray-600">Từ ngày:</label>
-                <input
-                  type="date"
-                  value={fromDate}
-                  onChange={(e) => {
-                    setFromDate(e.target.value);
-                    setCurrentPage(1);
-                  }}
-                  className="px-3 py-1.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-              <div className="flex items-center gap-2">
-                <label className="text-sm text-gray-600">Đến ngày:</label>
-                <input
-                  type="date"
-                  value={toDate}
-                  onChange={(e) => {
-                    setToDate(e.target.value);
-                    setCurrentPage(1);
-                  }}
-                  className="px-3 py-1.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-              {(fromDate || toDate || searchQuery || priorityFilter !== "all") && (
-                <button
-                  onClick={() => {
-                    setFromDate("");
-                    setToDate("");
-                    setSearchQuery("");
-                    setPriorityFilter("all");
-                    setCurrentPage(1);
-                  }}
-                  className="text-sm text-blue-600 hover:text-blue-700"
-                >
-                  Xóa bộ lọc
-                </button>
-              )}
+            <div className="flex items-center gap-2">
+              <label className="text-sm text-gray-600">Đến ngày:</label>
+              <input
+                type="date"
+                value={toDate}
+                onChange={(e) => {
+                  setToDate(e.target.value);
+                  setCurrentPage(1);
+                }}
+                className="px-3 py-1.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
             </div>
+            {(fromDate || toDate) && (
+              <button
+                onClick={() => {
+                  setFromDate("");
+                  setToDate("");
+                  setCurrentPage(1);
+                }}
+                className="text-sm text-blue-600 hover:text-blue-700"
+              >
+                Xóa bộ lọc
+              </button>
+            )}
           </div>
         </div>
         <div className="overflow-x-auto">
