@@ -5,7 +5,6 @@
 Hệ thống quản lý công việc toàn diện, giúp tổ chức theo dõi, phân công và quản lý công việc hiệu quả. Hệ thống được xây dựng với React, TypeScript, Tailwind CSS và React Router.
 
 ---
-
 ## Giao Diện Tổng Thể
 
 ### Header Top (Cố định)
