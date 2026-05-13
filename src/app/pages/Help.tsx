@@ -7,7 +7,7 @@ export default function Help() {
   const faqs = [
     {
       question: "Làm thế nào để tạo công việc mới?",
-      answer: "Để tạo công việc mới, bạn vào trang 'Danh Sách Công Việc' và nhấn nút 'Thêm Công Việc' ở góc trên bên phải. Điền đầy đủ thông tin như tên công việc, mô tả, người thực hiện, độ ưu tiên và ngày cuối, sau đó nhấn 'Lưu'."
+      answer: "Để tạo công việc mới, bạn vào trang 'Danh Sách Công Việc' và nhấn nút 'Thêm công việc' ở góc trên bên phải. Điền đầy đủ thông tin như tên công việc, mô tả, người thực hiện, độ ưu tiên và ngày cuối, sau đó nhấn 'Lưu'."
     },
     {
       question: "Làm cách nào để phân công công việc cho thành viên?",
@@ -19,7 +19,7 @@ export default function Help() {
     },
     {
       question: "Làm thế nào để thêm thành viên mới vào hệ thống?",
-      answer: "Vào trang 'Quản Lý Thành Viên', nhấn nút 'Thêm Thành Viên'. Điền thông tin cần thiết như họ tên, email, số điện thoại, phòng ban và chức vụ. Sau khi lưu, thành viên mới sẽ nhận được email kích hoạt tài khoản."
+      answer: "Vào trang 'Quản Lý Thành Viên', nhấn nút 'Thêm thành viên'. Điền thông tin cần thiết như họ tên, email, số điện thoại, phòng ban và chức vụ. Sau khi lưu, thành viên mới sẽ nhận được email kích hoạt tài khoản."
     },
     {
       question: "Tôi có thể tạo phòng ban mới như thế nào?",
@@ -27,7 +27,7 @@ export default function Help() {
     },
     {
       question: "Làm sao để đặt lịch họp hoặc sự kiện?",
-      answer: "Vào trang 'Lịch', nhấn nút 'Thêm Sự Kiện'. Chọn loại sự kiện (meeting, deadline, training), nhập tiêu đề, chọn ngày giờ và thêm người tham gia nếu cần. Hệ thống sẽ gửi thông báo nhắc nhở trước khi sự kiện diễn ra."
+      answer: "Vào trang 'Lịch', nhấn nút 'Thêm sự kiện'. Chọn loại sự kiện (meeting, deadline, training), nhập tiêu đề, chọn ngày giờ và thêm người tham gia nếu cần. Hệ thống sẽ gửi thông báo nhắc nhở trước khi sự kiện diễn ra."
     },
     {
       question: "Tôi có thể lọc công việc theo tiêu chí nào?",

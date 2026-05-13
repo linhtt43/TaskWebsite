@@ -76,7 +76,7 @@ export default function TaskList() {
         </div>
         <button className="bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-950 flex items-center gap-2">
           <Plus className="w-5 h-5" />
-          Thêm Công Việc
+          Thêm công việc
         </button>
       </div>
 

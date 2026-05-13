@@ -99,7 +99,7 @@ export default function Members() {
         </div>
         <button className="bg-blue-900 text-white px-4 py-2 rounded-lg hover:bg-blue-950 flex items-center gap-2">
           <Plus className="w-5 h-5" />
-          Thêm Thành Viên
+          Thêm thành viên
         </button>
       </div>
 
